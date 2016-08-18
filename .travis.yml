@@ -7,4 +7,4 @@ php:
 
 script: 
   - phpunit Test.php
-  - sudo echo never> /sys/kernel/mm/transparent_hugepage/enabled
+  - cat /sys/kernel/mm/transparent_hugepage/enabled
