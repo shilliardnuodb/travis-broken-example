@@ -3,4 +3,9 @@ php:
   - 5.5
   - 5.4
   - hhvm
+before_install:
+  - cat /sys/kernel/mm/transparent_hugepage/enabled
+  - sudo echo never> /sys/kernel/mm/transparent_hugepage/enabled
+  - cat /sys/kernel/mm/transparent_hugepage/defrag
+  - sudo echo never> /sys/kernel/mm/transparent_hugepage/defrag
 script: phpunit Test.php
