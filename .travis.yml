@@ -5,7 +5,8 @@ php:
   - 5.4
   - hhvm
 
-script: phpunit Test.php
+script: 
+  - phpunit Test.php
   - cat /sys/kernel/mm/transparent_hugepage/enabled
   - sudo echo never> /sys/kernel/mm/transparent_hugepage/enabled
   - cat /sys/kernel/mm/transparent_hugepage/defrag
