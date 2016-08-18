@@ -7,4 +7,5 @@ php:
 
 script: 
   - phpunit Test.php
-  - ls -lah /etc/init.d/disable-transparent-hugepages
+  - ls /sys/kernel/mm/transparent_hugepage/enabled
+  - ls /sys/kernel/mm/redhat_transparent_hugepage/enabled
