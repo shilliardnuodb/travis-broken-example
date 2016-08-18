@@ -1,5 +1,5 @@
 language: php
-sudo: true
+sudo: required
 php:
   - 5.5
   - 5.4
@@ -7,5 +7,4 @@ php:
 
 script: 
   - phpunit Test.php
-  - ls /sys/kernel/mm/transparent_hugepage/enabled
-  - ls /sys/kernel/mm/redhat_transparent_hugepage/enabled
+  - sudo echo never> /sys/kernel/mm/transparent_hugepage/enabled
